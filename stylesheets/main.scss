@@ -1,0 +1,59 @@
+@import "mixins/breakpoint";
+@import "mixins/rem";
+@import "mixins/background-props";
+@import "mixins/placeholder";
+@import "mixins/image-bg";
+
+// Base
+@import "base/base";
+
+//Components
+@import "components/icon";
+@import "components/buttons";
+@import "components/arrow-link";
+@import "components/standart-arrow";
+@import "components/bit-title";
+@import "components/input";
+@import "components/alt-arrow";
+@import "components/sub-title";
+
+//Widgets
+@import "widgets/phone-number";
+@import "widgets/main-menu";
+@import "widgets/main-header";
+@import "widgets/contacts";
+@import "widgets/contact-card";
+@import "widgets/tropical-living";
+@import "widgets/servise-list";
+@import "widgets/product-card";
+@import "widgets/main-room-slider";
+@import "widgets/nav-room-slider";
+@import "widgets/social-icons";
+@import "widgets/main-footer";
+@import "widgets/activities-card";
+@import "widgets/activities-section";
+@import "widgets/relaxed";
+@import "widgets/subscribe-section";
+@import "widgets/line-slider";
+@import "widgets/love-breakas";
+@import "widgets/subscribe-section";
+@import "widgets/tabs-section";
+@import "widgets/tabs";
+@import "widgets/head-banner";
+@import "widgets/gallery";
+@import "widgets/gallery-slider";
+@import "widgets/mfp-gallery";
+@import "widgets/adults-only";
+@import "widgets/info-section";
+@import "widgets/appartament";
+@import "widgets/appartament-servise";
+@import "widgets/activitie";
+@import "widgets/activities-rounded-block";
+@import "widgets/activities-layout";
+
+//layouts
+@import "layouts/page-404";
+@import "layouts/contact-us-layout";
+@import "layouts/dining-layout";
+@import "layouts/appartaments-layout";
+@import "layouts/massage-layout";

@@ -1,0 +1,33 @@
+.big-title {
+    font-family: $Alegreya;
+    font-size: rem(250px);
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 35px rgba(0, 0, 0, 0.08);
+    line-height: 90px;
+    color: #fff;
+
+    @include breakpoint(medium) {
+        font-size: rem(200px);
+    }
+
+
+    @include breakpoint(small) {
+        font-size: rem(80px);
+    }
+}
+
+.medium-big-title {
+    @extend .big-title;
+
+    font-size: rem(210px);
+
+    @include breakpoint(medium) {
+        font-size: rem(170px);
+    }
+
+
+    @include breakpoint(small) {
+        font-size: rem(80px);
+    }
+}

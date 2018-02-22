@@ -1,0 +1,119 @@
+@import "variables";
+@import "fonts";
+@import "typography";
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.main-content {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex: 0 0 auto;
+}
+
+p {
+    margin-bottom: 30px;
+
+    @include breakpoint(small) {
+        margin-bottom: 20px;
+    }
+}
+
+@mixin container {
+    padding-right: 30px;
+    padding-left: 30px;
+    margin: 0 auto;
+
+    @include breakpoint(medium) {
+        max-width: 1000px;
+    }
+
+
+    @include breakpoint(small) {
+        max-width: 770px;
+    }
+
+
+    @include breakpoint(mobile-landscape) {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+}
+
+strong, b {
+    font-family: $RalewayB;
+}
+
+.large-container {
+    max-width: 1230px;
+
+    @include container;
+}
+
+.small-container {
+    max-width: 1030px;
+
+    @include container;
+}
+
+.rounding-outer-container {
+    $rounding-radius: 70px;
+
+    overflow: hidden;
+
+    .rounding-inner-container {
+        margin-right: -40px;
+        padding-right: 40px;
+        margin-left: -40px;
+        padding-left: 40px;
+    }
+
+    .rounding-top {
+        border-top-right-radius: 50% $rounding-radius;
+        border-top-left-radius: 50% $rounding-radius;
+    }
+
+    .rounding-bottom {
+        border-bottom-right-radius: 50% $rounding-radius;
+        border-bottom-left-radius: 50% $rounding-radius;
+    }
+
+    @include breakpoint(extra-small) {
+        .rounding-top {
+            border-top-right-radius: 50% ($rounding-radius * 0.7);
+            border-top-left-radius: 50% ($rounding-radius * 0.7);
+        }
+
+        .rounding-bottom {
+            border-bottom-right-radius: 50% ($rounding-radius * 0.7);
+            border-bottom-left-radius: 50% ($rounding-radius * 0.7);
+        }
+    }
+
+
+    @include breakpoint(mobile-landscape) {
+        .rounding-top {
+            border-top-right-radius: 50% ($rounding-radius * 0.5);
+            border-top-left-radius: 50% ($rounding-radius * 0.5);
+        }
+
+        .rounding-bottom {
+            border-bottom-right-radius: 50% ($rounding-radius * 0.5);
+            border-bottom-left-radius: 50% ($rounding-radius * 0.5);
+        }
+    }
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}

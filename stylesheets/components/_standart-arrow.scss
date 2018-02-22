@@ -1,0 +1,54 @@
+$slider-arrow-right-normal: -317px -5px;
+$slider-arrow-right-hover: -239px -5px;
+$slider-arrow-right-pressed: -395px -5px;
+$slider-arrow-left-normal: -83px -5px;
+$slider-arrow-left-hover: -5px -5px;
+$slider-arrow-left-pressed: -161px -5px;
+
+.standart-arrow {
+    z-index: 1;
+    display: block;
+    width: 68px;
+    height: 68px;
+    margin-top: -34px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    background-image: url("../images/ui/standart-arrow-sprite.png");
+    cursor: pointer;
+    background-repeat: no-repeat;
+
+    &.slick-prev {
+        background-position: $slider-arrow-left-normal;
+
+        &:hover {
+            background-position: $slider-arrow-left-hover;
+        }
+
+        &:active {
+            background-position: $slider-arrow-left-pressed;
+        }
+    }
+
+    &.slick-next {
+        background-position: $slider-arrow-right-normal;
+
+        &:hover {
+            background-position: $slider-arrow-right-hover;
+        }
+
+        &:active {
+            background-position: $slider-arrow-right-pressed;
+        }
+    }
+
+    @include breakpoint(small) {
+        transform-origin: 50% 50%;
+        transform: scale(0.85);
+    }
+
+
+    @include breakpoint(mobile-landscape) {
+        transform: scale(0.75);
+    }
+}

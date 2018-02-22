@@ -1,0 +1,81 @@
+.contact-card {
+    position: relative;
+    max-width: 370px;
+    padding-top: 55px;
+    padding-right: 20px;
+    padding-bottom: 50px;
+    padding-left: 20px;
+    border-radius: $base-border-radius;
+    background-color: #fff;
+    box-shadow: $base-box-hadow;
+
+    h3 {
+        margin-bottom: 11px;
+    }
+
+    h2 {
+        margin-bottom: 22px;
+    }
+
+    .contacts-list {
+        padding-left: 20px;
+
+        .contact-item {
+            position: relative;
+            padding-left: 42px;
+            padding-bottom: 30px;
+            line-height: 1.7;
+
+            &:last-child {
+                padding-bottom: 0;
+            }
+
+            img {
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+
+            img + * {
+                letter-spacing: 1.2px;
+                font-size: rem(16px);
+                font-family: $RalewayS;
+                color: $base-font-color;
+            }
+
+            .phone + * {
+                font-size: rem(18px);
+            }
+        }
+    }
+
+    .button-row {
+        margin-top: 26px;
+    }
+
+    @include breakpoint(medium) {
+        max-width: 320px;
+        padding-top: 35px;
+        padding-bottom: 35px;
+
+        .contacts-list {
+            padding-left: 10px;
+        }
+    }
+
+
+    @include breakpoint(small) {
+        max-width: 300px;
+    }
+
+
+    @include breakpoint(extra-small) {
+        max-width: 260px;
+
+        .contacts-list {
+            .contact-item {
+                padding-bottom: 18px;
+            }
+        }
+    }
+}

@@ -1,0 +1,162 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+
+    @include breakpoint(medium) {
+        font-size: 15px;
+    }
+
+
+    @include breakpoint(small) {
+        font-size: 13px;
+    }
+}
+
+body {
+    color: $base-font-color;
+    font-family: $RalewayL;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    letter-spacing: 1.2px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+        display: block;
+    }
+}
+
+html, body {
+    margin: 0;
+}
+
+:focus {
+    outline: none !important;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    font-family: $Alegreya;
+    line-height: $heading-line-height;
+    text-transform: uppercase;
+    color: $base-heading-color;
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-size: rem(72px);
+    text-align: center;
+    letter-spacing: 3px;
+
+    @include breakpoint(extra-small) {
+        font-size: rem(60px);
+        margin-bottom: 40px;
+    }
+
+
+    @include breakpoint(mobile-landscape) {
+        font-size: rem(45px);
+        margin-bottom: 30px;
+    }
+}
+
+h2 {
+    font-size: rem(48px);
+    letter-spacing: 2.5px;
+
+    @include breakpoint(medium) {
+        font-size: rem(40px);
+        letter-spacing: 1px;
+    }
+
+
+    @include breakpoint(extra-small) {
+        font-size: rem(36px);
+        letter-spacing: normal;
+    }
+
+
+    @include breakpoint(mobile-landscape) {
+        font-size: rem(32px);
+    }
+}
+
+h3 {
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+    font-size: rem(36px);
+    font-family: $KaushanScript;
+    font-weight: 500;
+    text-transform: none;
+    text-align: center;
+
+    //letter-spacing: -0.5px;
+    color: $base-color;
+    transform-origin: 50% 50%;
+    transform: rotate(-5deg);
+
+    @include breakpoint(extra-small) {
+        font-size: rem(30px);
+        letter-spacing: normal;
+    }
+}
+
+h4 {
+    font-size: rem(32px);
+    letter-spacing: 1.5px;
+
+    // @include breakpoint(medium) {
+    //     font-size: rem(28px);
+    // }
+}
+
+h5 {
+    font-size: rem(20px);
+    letter-spacing: 1px;
+    margin-bottom: 0;
+}
+
+h6 {
+    font-size: rem(16px);
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    font-family: $RalewayS;
+    color: $base-color;
+    transition-duration: 0.3s;
+
+    &:active,
+    &:focus,
+    &:hover {
+        color: $base-color;
+        text-decoration: none;
+        text-decoration: none;
+    }
+}

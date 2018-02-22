@@ -1,0 +1,27 @@
+@mixin placeholder($color, $ff: inherit) {
+    &::-webkit-input-placeholder {
+        color: $color;
+        text-overflow: ellipsis;
+        font-family: $ff;
+    }
+
+    &::-moz-placeholder {
+        color: $color;
+        text-overflow: ellipsis;
+        font-family: $ff;
+    }
+
+    /* Firefox 19+ */
+    &:-moz-placeholder {
+        color: $color;
+        text-overflow: ellipsis;
+        font-family: $ff;
+    }
+
+    /* Firefox 18- */
+    &:-ms-input-placeholder {
+        color: $color;
+        text-overflow: ellipsis;
+        font-family: $ff;
+    }
+}

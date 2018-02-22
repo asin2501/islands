@@ -1,0 +1,82 @@
+.adults-only {
+    position: relative;
+    padding-bottom: 110px;
+    text-align: center;
+
+    &::after, &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: block;
+        background-repeat: no-repeat;
+    }
+
+    &::after {
+        background-image: url("../images/main-page/right-leaf.png");
+        background-position: 83% 0;
+    }
+
+    &::before {
+        background-image: url("../images/main-page/left-leaf.png");
+        background-position: 17% 0;
+    }
+
+    .description {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    @include breakpoint(medium) {
+        .description {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        &::before {
+            background-position: 0 0;
+        }
+
+        &::after {
+            background-position: 100% 0;
+        }
+    }
+
+
+    @include breakpoint(extra-small) {
+        padding-bottom: 60px;
+
+        &::after, &::before {
+            background-size: auto 150%;
+        }
+    }
+
+
+    @include breakpoint(mobile-landscape) {
+        &::after {
+            background-position: 110% 0;
+        }
+
+        &::before {
+            background-position: -10% 0;
+        }
+
+        &::after, &::before {
+            background-size: auto 120%;
+            opacity: 0.5;
+        }
+    }
+
+
+    @include breakpoint(mobile-landscape) {
+        &::after {
+            background-position: 120% 0;
+        }
+
+        &::before {
+            background-position: -20% 0;
+        }
+    }
+}

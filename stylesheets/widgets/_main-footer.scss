@@ -1,0 +1,176 @@
+.main-footer {
+    padding-top: 55px;
+    background-color: $footer-main-bg;
+    text-align: center;
+
+    & > .large-container {
+        padding-bottom: 40px;
+    }
+
+    .logo {
+        + * {
+            margin-top: 22px;
+        }
+    }
+
+    .main-nav {
+        margin-right: auto;
+        margin-left: auto;
+
+        .main-menu {
+            justify-content: center;
+
+            li {
+                & + li {
+                    margin-left: 30px;
+                }
+
+                &.active {
+                    a {
+                        font-family: $RalewayExtraBold;
+                    }
+                }
+
+                a {
+                    font-family: $RalewayS;
+                    opacity: .5;
+                }
+            }
+        }
+
+        + * {
+            margin-top: 30px;
+        }
+    }
+
+    .phone-number {
+        .number {
+            font-size: rem(18px);
+        }
+    }
+
+    .footer-contacts {
+        display: flex;
+        justify-content: space-between;
+        max-width: 970px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .copyright {
+        padding: 8px 0;
+        background-color: $copyright-bg;
+        font-size: rem(14px);
+        letter-spacing: 1.6px;
+        color: rgba(255, 255, 255, 0.5);
+
+        .large-container {
+            display: flex;
+            justify-content: space-between;
+
+            .dusted-link {
+                margin-left: 15px;
+            }
+        }
+
+        .dusted-item {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    @include breakpoint(small) {
+        padding-top: 50px;
+
+        .phone-number {
+            .number {
+                display: block;
+            }
+        }
+    }
+
+
+    @include breakpoint(extra-small) {
+        .main-nav {
+            .main-menu {
+                flex-wrap: wrap;
+                padding-top: 20px;
+                padding-bottom: 20px;
+
+                li {
+                    width: 50%;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                }
+
+                li + li {
+                    margin-left: 0;
+                }
+
+                li:nth-child(2n) {
+                    padding-left: 20px;
+                    text-align: left;
+                }
+
+                li:nth-child(2n+1) {
+                    padding-right: 20px;
+                    text-align: right;
+                }
+            }
+        }
+
+        .copyright {
+            .large-container {
+                flex-direction: column;
+
+                & > * + * {
+                    margin-top: 10px;
+                }
+            }
+        }
+
+        .phone-number {
+            .number {
+                display: none;
+            }
+
+            + .phone-number {
+                margin-left: 21px;
+            }
+        }
+
+        .footer-contacts {
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .social-icons {
+                width: 100%;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                li {
+                    margin: 10px;
+                }
+            }
+        }
+    }
+
+
+    @include breakpoint(mobile-landscape) {
+        .copyright {
+            padding-top: 14px;
+            padding-bottom: 14px;
+
+            .large-container {
+                .dusted-item {
+                    flex-direction: column;
+
+                    a {
+                        margin-left: 0;
+                        margin-top: 4px;
+                    }
+                }
+            }
+        }
+    }
+}

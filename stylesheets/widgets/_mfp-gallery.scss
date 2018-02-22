@@ -1,0 +1,70 @@
+.mfp-gallery {
+    .mfp-counter {
+        display: none;
+    }
+
+    img.mfp-img {
+        max-width: 770px;
+    }
+
+    .alt-arrow {
+        position: absolute;
+        z-index: 10000;
+        top: 50%;
+        margin-top: -25px;
+
+        &.alt-arrow-left {
+            right: 1390px;
+        }
+
+        &.alt-arrow-right {
+            left: 1390px;
+        }
+    }
+
+    @include breakpoint(extra-large) {
+        img.mfp-img {
+            max-width: 100%;
+        }
+
+        .alt-arrow {
+            &.alt-arrow-left {
+                right: auto;
+                left: 50px;
+            }
+
+            &.alt-arrow-right {
+                left: auto;
+                right: 50px;
+            }
+        }
+    }
+
+
+    @include breakpoint(medium) {
+        .alt-arrow {
+            &.alt-arrow-left {
+                left: 20px;
+            }
+
+            &.alt-arrow-right {
+                right: 20px;
+            }
+        }
+    }
+
+
+    @include breakpoint(small-tablet-portrait) {
+        .alt-arrow {
+            transform: scale(0.75);
+
+            &.alt-arrow-left {
+                left: 10px;
+            }
+
+            &.alt-arrow-right {
+                right: 10px;
+            }
+        }
+    }
+}

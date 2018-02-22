@@ -1,0 +1,7 @@
+.social-icons {
+    display: inline-flex;
+
+    li + li {
+        margin-left: 21px;
+    }
+}

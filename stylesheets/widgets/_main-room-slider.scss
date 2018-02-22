@@ -1,0 +1,9 @@
+.main-room-slider {
+    width: 100%;
+
+    .room-slide {
+        .inner-wrapper {
+            @include image-bg;
+        }
+    }
+}

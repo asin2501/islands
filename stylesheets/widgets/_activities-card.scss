@@ -1,0 +1,91 @@
+.activities-card {
+    position: relative;
+    display: block;
+    max-width: 270px;
+    padding-top: 25px;
+    padding-right: 18px;
+    padding-bottom: 62px;
+    padding-left: 18px;
+    border-radius: 10px;
+    background-color: $border-color;
+    text-align: center;
+
+    .img-circle {
+        display: inline-block;
+        width: 201px;
+        height: 201px;
+        margin-top: -127px;
+        margin-bottom: 15px;
+        border-radius: 50%;
+
+        @include background-props;
+    }
+
+    h5 {
+        margin-bottom: 12px;
+    }
+
+    .description,
+    .sub-description,
+    .time {
+        display: block;
+        line-height: 1;
+    }
+
+    .description {
+        margin-bottom: 13px;
+        font-family: $RalewayS;
+        font-size: rem(18px);
+
+        + .description {
+            //margin-top: 10px;
+       
+        }
+    }
+
+    .sub-description {
+        margin-top: 7px;
+        font-family: $RalewayS;
+        font-size: rem(10px);
+        letter-spacing: 0.7px;
+    }
+
+    .time {
+        margin-top: 17px;
+        margin-bottom: 12px;
+
+        &::before {
+            content: url(../images/icons/icon-clock.png);
+            display: inline-block;
+            margin-right: 12px;
+            vertical-align: middle;
+            line-height: 0;
+        }
+    }
+
+    .activities-card-content {
+        height: 120px;
+        overflow: hidden;
+    }
+
+    p {
+        letter-spacing: 1.2px;
+        line-height: 1.9;
+        margin-bottom: 8px;
+    }
+
+    .arrow-link {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    @include breakpoint(small) {
+        .img-circle {
+            width: 141px;
+            height: 141px;
+            margin-top: -91px;
+        }
+    }
+}

@@ -1,0 +1,59 @@
+.line-slider {
+    position: relative;
+    margin-right: 15px;
+    margin-left: 15px;
+
+    .line-slide {
+        padding-right: 15px;
+        padding-left: 15px;
+
+        .image-wrapper {
+            @include image-bg(41.66%);
+
+            border-radius: $base-border-radius;
+        }
+    }
+
+    .standart-arrow {
+        position: absolute;
+        top: 50%;
+
+        &.slick-prev {
+            left: 34.5%;
+        }
+
+        &.slick-next {
+            right: 34.5%;
+        }
+    }
+
+    @include breakpoint(medium) {
+        .standart-arrow {
+            &.slick-prev {
+                left: 2%;
+            }
+
+            &.slick-next {
+                right: 2%;
+            }
+        }
+    }
+
+
+    @include breakpoint(extra-small) {
+        .line-slide {
+            padding-right: 5px;
+            padding-left: 5px;
+        }
+
+        .standart-arrow {
+            &.slick-prev {
+                left: 5%;
+            }
+
+            &.slick-next {
+                right: 5%;
+            }
+        }
+    }
+}

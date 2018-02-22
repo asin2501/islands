@@ -1,0 +1,44 @@
+.servise-list {
+    display: flex;
+    text-align: center;
+    flex-basis: 970px;
+    flex-shrink: 2;
+    justify-content: space-between;
+
+    li {
+        width: 110px;
+    }
+
+    .servise-icon {
+        background-color: $base-color;
+        width: 70px;
+        height: 70px;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        border-radius: $base-border-radius;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+
+    @include breakpoint(extra-small) {
+        justify-content: center;
+        flex-wrap: wrap;
+
+        li {
+            width: 110px;
+            padding-right: 10px;
+            padding-left: 10px;
+            margin-bottom: 30px;
+        }
+    }
+
+
+    @include breakpoint(mobile) {
+        li {
+            width: 90px;
+            margin-bottom: 20px;
+            padding-right: 5px;
+            padding-left: 5px;
+        }
+    }
+}

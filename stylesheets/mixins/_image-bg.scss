@@ -1,0 +1,8 @@
+@mixin image-bg($ratio: 66.66%, $selector: ".image") {
+    & > #{$selector} {
+        width: 100%;
+        padding-top: $ratio;
+        background-size: cover;
+        background-position: 50% 50%;
+    }
+}

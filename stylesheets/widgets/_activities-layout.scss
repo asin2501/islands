@@ -1,0 +1,65 @@
+.activities-layout {
+    .head-banner {
+        margin-bottom: 100px;
+    }
+
+    .first-activities {
+        margin-bottom: 180px;
+    }
+
+    .first-activities + .activities-rounded-block {
+        margin-bottom: 65px;
+    }
+
+    .second-activities {
+        margin-bottom: 185px;
+    }
+
+    .second-activities + .activities-rounded-block {
+        margin-bottom: 80px;
+    }
+
+    @include breakpoint(medium) {
+        .first-activities {
+            margin-bottom: 100px;
+        }
+
+        .second-activities {
+            margin-bottom: 100px;
+        }
+    }
+
+
+    @include breakpoint(small) {
+        .head-banner {
+            margin-bottom: 40px;
+        }
+
+        .first-activities {
+            margin-bottom: 70px;
+        }
+
+        .second-activities {
+            margin-bottom: 70px;
+        }
+
+        .first-activities + .activities-rounded-block, .second-activities + .activities-rounded-block {
+            margin-bottom: 40px;
+
+            .rounding-inner-container {
+                background-position: 25% 50%;
+            }
+        }
+    }
+
+
+    @include breakpoint(mobile-landscape) {
+        .first-activities {
+            margin-bottom: 40px;
+        }
+
+        .second-activities {
+            margin-bottom: 40px;
+        }
+    }
+}

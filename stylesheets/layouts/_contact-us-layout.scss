@@ -1,0 +1,20 @@
+.contact-us-layout {
+    .contacts {
+        .small-container {
+            padding-top: 205px;
+            padding-bottom: 160px;
+
+            .contact-card {
+                padding-bottom: 60px;
+            }
+        }
+    }
+
+    @include breakpoint(small-tablet-portrait) {
+        .contacts {
+            .small-container {
+                padding-top: 30px;
+            }
+        }
+    }
+}

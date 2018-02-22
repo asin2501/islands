@@ -1,0 +1,38 @@
+.contacts {
+    position: relative;
+
+    .small-container {
+        padding-top: 168px;
+        padding-bottom: 117px;
+    }
+
+    .contact-card {
+        z-index: 10;
+    }
+
+    .map-container {
+        position: absolute !important;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    @include breakpoint(extra-small) {
+        .map-container {
+            position: relative !important;
+            height: 400px;
+        }
+
+        .small-container {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            background-color: #f5f5f5;
+
+            .contact-card {
+                max-width: 300px;
+                margin: 0 auto;
+            }
+        }
+    }
+}

@@ -1,0 +1,45 @@
+.head-banner {
+    position: relative;
+    z-index: 1;
+    margin-bottom: -50px;
+
+    &.home-head-banner {
+        .image-wrapper {
+            text-align: center;
+            margin-top: -5px;
+
+            & > * {
+                display: block;
+                margin: 0 auto;
+            }
+
+            margin-bottom: 120px;
+        }
+
+        .rounding-inner-container {
+            padding-bottom: 100px;
+        }
+    }
+
+    .rounding-inner-container {
+        padding-top: 215px;
+        padding-bottom: 75px;
+
+        @include background-props(50%, 7%);
+
+        h1 {
+            margin-bottom: 75px;
+            color: #fff;
+        }
+
+        h3 {
+            font-size: rem(44px);
+        }
+    }
+
+    @include breakpoint(small) {
+        .rounding-inner-container {
+            padding-top: 180px;
+        }
+    }
+}

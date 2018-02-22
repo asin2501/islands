@@ -1,0 +1,119 @@
+.relaxed {
+    .large-container {
+        background-image: url("../images/main-page/relaxed-bg.png");
+        background-repeat: no-repeat;
+        background-position-x: 94%;
+        background-position-y: 37%;
+        background-size: auto;
+    }
+
+    .relaxed-container {
+        display: flex;
+        max-width: 970px;
+        margin: auto;
+        padding-top: 170px;
+        padding-bottom: 157px;
+
+        .relaxed-img {
+            position: relative;
+            max-width: 401px;
+            width: 100%;
+            height: 480px;
+            line-height: 0;
+
+            @include background-props;
+
+            &::after {
+                content: url(../images/main-page/water-mark.png);
+                position: absolute;
+                left: -100px;
+                bottom: -87px;
+            }
+        }
+
+        .relaxed-content {
+            max-width: 470px;
+            margin-left: 100px;
+            padding-top: 28px;
+
+            h2, h3 {
+                text-align: left;
+            }
+
+            h2 {
+                letter-spacing: 3.5px;
+                margin-bottom: 28px;
+            }
+
+            h3 {
+                margin-bottom: 22px;
+            }
+
+            p {
+                line-height: 1.9;
+            }
+        }
+    }
+
+    @include breakpoint(medium) {
+        .relaxed-container {
+            .relaxed-img {
+                padding: 0 20px;
+
+                &::after {
+                    left: -65px;
+                    bottom: -80px;
+                    transform: scale(0.5);
+                }
+            }
+
+            .relaxed-content {
+                margin-left: 80px;
+            }
+        }
+    }
+
+
+    @include breakpoint(small) {
+        .large-container {
+            background-position: center;
+            background-size: contain;
+        }
+
+        .relaxed-container {
+            flex-wrap: wrap;
+            padding-top: 50px;
+            padding-bottom: 70px;
+
+            .relaxed-img {
+                order: 1;
+                width: 90%;
+                height: 320px;
+                margin: auto;
+                padding: 0 30px;
+            }
+
+            .relaxed-content {
+                order: 0;
+                width: 100%;
+                max-width: 100%;
+                margin-left: 0;
+                margin-bottom: 30px;
+                text-align: center;
+
+                h2, h3 {
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+
+    @include breakpoint(mobile-landscape) {
+        .relaxed-container {
+            .relaxed-img {
+                height: 250px;
+            }
+        }
+    }
+}

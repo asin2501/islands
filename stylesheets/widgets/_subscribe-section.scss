@@ -1,0 +1,135 @@
+.subscribe-section {
+    padding-top: 35px;
+    position: relative;
+    z-index: 1;
+    margin-bottom: -50px;
+    margin-top: -140px;
+
+    .rounding-inner-container {
+        background-color: $base-color;
+
+        .large-container {
+            padding-top: 73px;
+            padding-bottom: 73px;
+            position: relative;
+        }
+    }
+
+    .inner-wrapper {
+        display: flex;
+
+        h5 {
+            flex-basis: 230px;
+        }
+
+        .decorative-img {
+            top: -20px;
+            right: 20px;
+            position: absolute;
+        }
+
+        form {
+            display: flex;
+            align-items: center;
+
+            .form-item {
+                input[type='text'], input[type='email'], input[type='tel'] {
+                    width: 270px;
+                }
+
+                .base-button {
+                    padding-top: 13px;
+                    padding-bottom: 13px;
+                }
+
+                &:not(:first-child) {
+                    margin-left: 30px;
+                }
+            }
+        }
+    }
+
+    @include breakpoint(medium) {
+        .inner-wrapper {
+            h5 {
+                flex-basis: auto;
+                margin-bottom: 30px;
+            }
+        }
+
+        .inner-wrapper {
+            flex-direction: column;
+        }
+    }
+
+
+    @include breakpoint(small) {
+        padding-top: 40px;
+
+        .rounding-inner-container {
+            .large-container {
+                padding-top: 60px;
+                padding-bottom: 50px;
+            }
+        }
+
+        .inner-wrapper {
+            .decorative-img {
+                top: -40px;
+                right: 0;
+                width: 140px;
+            }
+
+            form {
+                .form-item {
+                    input[type='text'], input[type='email'], input[type='tel'] {
+                        width: 210px;
+                        font-size: rem(20px);
+                    }
+
+                    &:not(:first-child) {
+                        margin-left: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+
+    @include breakpoint(extra-small) {
+        padding-top: 60px;
+
+        .rounding-inner-container {
+            .large-container {
+                padding-top: 80px;
+            }
+        }
+
+        .inner-wrapper {
+            .decorative-img {
+                top: -60px;
+                width: 120px;
+                right: 30%;
+            }
+
+            h5 {
+                text-align: center;
+            }
+
+            form {
+                flex-direction: column;
+
+                .form-item {
+                    input[type='text'], input[type='email'], input[type='tel'] {
+                        width: 250px;
+                    }
+
+                    &:not(:first-child) {
+                        margin-left: 0;
+                        margin-top: 15px;
+                    }
+                }
+            }
+        }
+    }
+}

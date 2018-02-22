@@ -1,0 +1,29 @@
+.appartaments-layout {
+    .appartaments-page-description {
+        padding-top: 70px;
+        text-align: center;
+
+        .big-title {
+            margin-bottom: 10px;
+        }
+
+        .description {
+            max-width: 580px;
+            margin: 0 auto;
+        }
+    }
+
+    .appartament-wrapper {
+        margin-top: 70px;
+        margin-bottom: 20px;
+    }
+
+    .about-policy {
+        margin-top: 60px;
+        margin-bottom: 70px;
+
+        a {
+            color: inherit;
+        }
+    }
+}

@@ -1,0 +1,25 @@
+.phone-number {
+    display: inline-flex;
+    align-items: center;
+    color: #fff;
+
+    .number {
+        margin-left: 11px;
+        font-size: rem(20px);
+        letter-spacing: 1.6px;
+        color: #fff;
+    }
+
+    @include breakpoint(medium) {
+        .number {
+            font-size: rem(16px);
+        }
+    }
+
+
+    @include breakpoint(small) {
+        .number {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,150 @@
+.product-card {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 25px;
+    padding-right: 20px;
+    padding-bottom: 55px;
+    padding-left: 28px;
+    border: 3px solid transparent;
+    border-radius: $base-border-radius;
+    transition-property: background-color, border-color;
+    transition-timing-function: linear;
+    transition-duration: 300ms;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgba($room-card-bg, 0.2);
+        border-color: rgba(#fff, 0.7);
+    }
+
+    &:not(:first-child) {
+        margin-top: 10px;
+    }
+
+    .arrow-link {
+        position: absolute;
+        bottom: 25px;
+        right: 30px;
+    }
+
+    .special-image-wrapper {
+        flex-basis: 170px;
+        flex-shrink: 0;
+        margin-right: 18px;
+
+        @include image-bg(64.7%);
+    }
+
+    .product-card-content {
+        flex-basis: 100%;
+        flex-shrink: 2;
+
+        .price {
+            font-family: $RalewayS;
+            letter-spacing: 1px;
+        }
+
+        .property {
+            display: flex;
+            padding-top: 10px;
+            justify-content: space-between;
+
+            li > * {
+                vertical-align: middle;
+            }
+
+            img {
+                margin-right: 8px;
+            }
+        }
+    }
+
+    &.active {
+        background-color: $room-card-bg;
+        border-color: #fff;
+    }
+
+    h5 {
+        line-height: 1.2;
+        margin-top: -4px;
+        margin-bottom: 15px;
+    }
+
+    @include breakpoint(medium) {
+        padding-top: 15px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 45px;
+
+        .special-image-wrapper {
+            flex-basis: 145px;
+        }
+
+        .property {
+            flex-direction: column;
+
+            & > * {
+                margin: 2px;
+            }
+        }
+    }
+
+
+    @include breakpoint(small) {
+        width: 50%;
+        flex-direction: column;
+        margin: 0 10px;
+        padding-top: 35px;
+        padding-right: 35px;
+        padding-left: 35px;
+
+        .product-card-content {
+            width: 100%;
+            text-align: center;
+        }
+
+        .special-image-wrapper {
+            flex-basis: auto;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        &:not(:first-child) {
+            margin-top: 0;
+        }
+
+        .arrow-link {
+            bottom: 15px;
+            right: 50%;
+            transform: translateX(50%);
+        }
+    }
+
+
+    @include breakpoint(extra-small) {
+        padding-top: 25px;
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+
+
+    @include breakpoint(small-tablet-portrait) {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        max-width: 260px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-right: 25px;
+        padding-left: 25px;
+
+        &:not(:first-child) {
+            margin-top: 10px;
+        }
+    }
+}

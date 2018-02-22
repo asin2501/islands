@@ -1,0 +1,194 @@
+.love-breakas {
+    overflow: hidden;
+    padding-top: 117px;
+    padding-bottom: 177px;
+    background-image: url("../images/bg/sand-bg.jpg");
+
+    @include background-props;
+
+    h2 {
+        margin-bottom: 42px;
+    }
+
+    .love-breakas-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        .commentarys-block {
+            max-width: 600px;
+            width: 100%;
+            padding-right: 10px;
+
+            .comment {
+                display: flex;
+                align-items: flex-start;
+
+                .comment-media {
+                    margin-right: 40px;
+
+                    .content-media-img {
+                        width: 120px;
+                        height: 120px;
+                        border-radius: 50%;
+
+                        @include background-props;
+                    }
+
+                    .content-media-title {
+                        margin-top: 10px;
+                        font-family: $RalewayS;
+                        font-size: rem(14px);
+                        text-align: center;
+                    }
+                }
+
+                .comment-content {
+                    position: relative;
+                    max-width: 270px;
+                    padding-right: 25px;
+                    padding-left: 25px;
+                    padding-top: 16px;
+                    padding-bottom: 15px;
+                    border-radius: 10px;
+                    background-color: #fff;
+                    box-shadow: $base-box-hadow;
+                    font-family: $RalewayLI;
+                    letter-spacing: 0.7px;
+                    line-height: 1.85;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        left: -10px;
+                        top: 50%;
+                        display: block;
+                        width: 0;
+                        height: 0;
+                        border-top: 10px solid transparent;
+                        border-bottom: 10px solid transparent;
+                        border-right: 10px solid #fff;
+                        transform: translateY(-50%);
+                    }
+                }
+
+                &:nth-child(2n) {
+                    flex-direction: row-reverse;
+
+                    .comment-media {
+                        margin-right: 0;
+                        margin-left: 40px;
+                    }
+
+                    .comment-content {
+                        text-align: right;
+
+                        &::before {
+                            left: auto;
+                            right: -20px;
+                            border-right: 10px solid transparent;
+                            border-left: 10px solid #fff;
+                        }
+                    }
+                }
+
+                + .comment {
+                    margin-top: 5px;
+                }
+            }
+        }
+
+        .award-block {
+            max-width: 300px;
+            padding-top: 56px;
+            padding-bottom: 30px;
+            padding-right: 30px;
+            padding-left: 30px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: $base-box-hadow;
+            text-align: center;
+
+            h5 {
+                margin-bottom: 39px;
+            }
+
+            .arrow-link {
+                font-size: rem(13px);
+                text-transform: none;
+                color: $base-color;
+
+                &::after {
+                    content: url("../images/ui/arrow-review.png");
+                }
+            }
+
+            * + .arrow-link {
+                margin-top: 35px;
+            }
+        }
+    }
+
+    @include breakpoint(small) {
+        padding-top: 60px;
+
+        //padding-bottom: 55px;
+
+        .love-breakas-container {
+            flex-wrap: wrap;
+
+            .commentarys-block {
+                margin: auto;
+
+                .comment {
+                    + .comment {
+                        margin-top: 40px;
+                    }
+                }
+            }
+
+            .award-block {
+                max-width: 270px;
+                margin-top: 40px;
+                margin-right: auto;
+                margin-left: auto;
+            }
+        }
+    }
+
+
+    @include breakpoint(extra-small) {
+        .love-breakas-container {
+            .commentarys-block {
+                padding-right: 0;
+
+                .comment,
+                .comment:nth-child(2n) {
+                    flex-direction: column;
+                    align-items: center;
+
+                    .comment-media {
+                        margin-right: 0;
+                        margin-left: 0;
+                        margin-bottom: 20px;
+                    }
+
+                    .comment-content {
+                        &::before {
+                            left: 50%;
+                            border-right: 10px solid transparent;
+                            border-left: 10px solid transparent;
+                            border-bottom: 10px solid #fff;
+                            top: -10px;
+                            transform: translate(-50%, -50%);
+                        }
+                    }
+                }
+            }
+
+            .award-block {
+                max-width: 270px;
+            }
+        }
+    }
+}

@@ -1,0 +1,63 @@
+.nav-room-slider {
+    position: relative;
+    margin-right: -10px;
+    margin-left: -10px;
+    margin-top: 20px;
+
+    .room-slide {
+        padding-right: 10px;
+        padding-left: 10px;
+
+        .inner-wrapper {
+            @include image-bg;
+        }
+    }
+
+    .standart-arrow {
+        position: absolute;
+        top: 50%;
+        z-index: 1;
+
+        &.slick-prev {
+            left: 20px;
+        }
+
+        &.slick-next {
+            right: 20px;
+        }
+    }
+
+    @include breakpoint(small) {
+        .standart-arrow {
+            &.slick-prev {
+                left: 10px;
+            }
+
+            &.slick-next {
+                right: 10px;
+            }
+        }
+    }
+
+
+    @include breakpoint(mobile-landscape) {
+        margin-top: 10px;
+        margin-right: -5px;
+        margin-left: -5px;
+
+        .room-slide {
+            padding-right: 5px;
+            padding-left: 5px;
+        }
+
+        .standart-arrow {
+            &.slick-prev {
+                left: 0;
+            }
+
+            &.slick-next {
+                right: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,64 @@
+.activities-rounded-block {
+    .section-content {
+        width: 50%;
+        padding-left: 105px;
+        padding-top: 100px;
+        padding-bottom: 80px;
+        margin-left: 50%;
+        text-align: left;
+        color: #fff;
+
+        h2 {
+            text-align: left;
+            color: #fff;
+        }
+
+        h3 {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+    }
+
+    .rounding-inner-container {
+        @include background-props;
+
+        overflow: hidden;
+    }
+
+    @include breakpoint(medium) {
+        .section-content {
+            padding-left: 50px;
+        }
+    }
+
+
+    @include breakpoint(small) {
+        .section-content {
+            padding-left: 0;
+        }
+    }
+
+
+    @include breakpoint(small-tablet-portrait) {
+        .section-content {
+            text-align: center;
+            width: auto;
+            margin-left: 0;
+            padding-top: 70px;
+            padding-bottom: 40px;
+
+            h2 {
+                text-align: center;
+            }
+
+            h3 {
+                text-align: center;
+                margin-bottom: 10px;
+            }
+        }
+
+        .large-container {
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+    }
+}

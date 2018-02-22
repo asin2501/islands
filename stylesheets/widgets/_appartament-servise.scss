@@ -1,0 +1,18 @@
+.appartament-servise {
+    margin-top: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: $background-color;
+
+    .appartament-servise-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .servise-item {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding-right: 20px;
+        width: 20%;
+    }
+}

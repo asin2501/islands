@@ -1,0 +1,59 @@
+.main-nav {
+    max-width: 710px;
+    width: 100%;
+    flex: 1;
+    margin: 0 15px;
+
+    .mobile-button {
+        display: none;
+    }
+
+    .main-menu {
+        display: flex;
+        justify-content: space-between;
+
+        li {
+            &.active {
+                a {
+                    font-family: $RalewayExtraBold;
+                }
+            }
+
+            a {
+                position: relative;
+                font-family: $RalewayM;
+                font-size: rem(14px);
+                text-transform: none;
+                letter-spacing: 1.5px;
+                color: #fff;
+                transform: translate3d(0, 0, 0);
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    opacity: 0;
+                    width: 100%;
+                    bottom: 0;
+                    left: 0;
+                    height: 1px;
+                    background-color: #b2b2b2;
+                    transition-duration: .3s;
+                    transition-property: opacity, transform;
+                    transform: scale(1);
+                }
+
+                &:hover {
+                    &::before {
+                        opacity: 1;
+                        transform: scale(-1);
+                    }
+                }
+            }
+        }
+    }
+
+    @include breakpoint(medium) {
+        margin: 0 40px;
+    }
+}

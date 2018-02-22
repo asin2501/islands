@@ -1,0 +1,61 @@
+.massage-layout {
+    .head-banner {
+        .rounding-inner-container {
+            padding-bottom: 110px;
+        }
+    }
+
+    .activities-section {
+        padding-top: 80px;
+    }
+
+    .activities-container {
+        .activities-card {
+            max-width: 370px;
+            margin-top: 159px;
+            padding-bottom: 22px;
+
+            .activities-card-content {
+                height: auto;
+            }
+        }
+    }
+
+    @include breakpoint(medium) {
+        .activities-container {
+            .activities-card {
+                width: 30%;
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+        }
+    }
+
+
+    @include breakpoint(small) {
+        .activities-container {
+            .activities-card {
+                margin-top: 100px;
+            }
+        }
+    }
+
+
+    @include breakpoint(extra-small) {
+        .activities-container {
+            .activities-card {
+                width: 45%;
+            }
+        }
+    }
+
+
+    @include breakpoint(small-tablet-portrait) {
+        .activities-container {
+            .activities-card {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    }
+}

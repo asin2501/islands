@@ -1,0 +1,5 @@
+@mixin background-props($positionX: 50%, $positionY: 50%, $size: cover) {
+    background-position: $positionX $positionY;
+    background-repeat: no-repeat;
+    background-size: $size;
+}

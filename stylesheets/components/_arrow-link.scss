@@ -1,0 +1,28 @@
+.arrow-link {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: rem(12px);
+    text-transform: uppercase;
+    letter-spacing: 0.9px;
+    line-height: 1;
+    color: $arrow-link-color;
+
+    &::after {
+        content: url("../images/ui/arrow-link.png");
+        transition-duration: .3s;
+        transition-property: transform;
+        transform: translateX(5px);
+    }
+
+    &:hover {
+        &::after {
+            transform: translateX(10px);
+        }
+    }
+
+    &:focus {
+        color: $arrow-link-color-focus;
+    }
+}

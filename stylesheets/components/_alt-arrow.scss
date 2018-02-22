@@ -1,0 +1,53 @@
+$alt-next-btn: 0 0;
+$alt-next-btn-hover: (-100px) 0;
+$alt-next-btn-presed: (-150px) 0;
+$alt-next-btn-disabled: -50px 0;
+
+$alt-prev-btn: (-200px) 0;
+$alt-prev-btn-hover: (-300px) 0;
+$alt-prev-btn-presed: (-350px) 0;
+$alt-prev-btn-disabled: (-250px) 0;
+
+.alt-arrow {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    background-image: url("../images/ui/alt-arrows-sprite.png");
+    background-repeat: no-repeat;
+    display: block;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    &.alt-arrow-next, &.alt-arrow-right {
+        background-position: $alt-next-btn;
+
+        &:hover {
+            background-position: $alt-next-btn-hover;
+        }
+
+        &:active {
+            background-position: $alt-next-btn-presed;
+        }
+
+        &.slick-disabled {
+            background-position: $alt-next-btn-disabled;
+        }
+    }
+
+    &.alt-arrow-prev, &.alt-arrow-left {
+        background-position: $alt-prev-btn;
+
+        &:hover {
+            background-position: $alt-prev-btn-hover;
+        }
+
+        &:active {
+            background-position: $alt-prev-btn-presed;
+        }
+
+        &.slick-disabled {
+            background-position: $alt-prev-btn-disabled;
+        }
+    }
+}

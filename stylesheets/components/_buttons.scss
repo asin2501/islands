@@ -1,0 +1,51 @@
+.base-button {
+    padding-top: 10px;
+    padding-right: 28px;
+    padding-bottom: 10px;
+    padding-left: 28px;
+    border-radius: $base-border-radius;
+    border: 3px solid $border-color;
+    background-color: $base-color;
+    font-family: $WorkSans;
+    font-size: rem(14px);
+    letter-spacing: 3px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000;
+    transition-property: $base-btn-hover-color;
+    transition-timing-function: linear;
+    transition-duration: 300ms;
+
+    &:hover {
+        background-color: $base-btn-hover-color;
+    }
+
+    &:active {
+        transition-duration: 100ms;
+        background-color: $base-btn-pressed-color;
+    }
+
+    &.white {
+        background-color: #fff;
+
+        &:hover {
+            background-color: $white-btn-hover-color;
+        }
+
+        &:active {
+            transition-duration: 100ms;
+            background-color: $white-btn-pressed-color;
+        }
+    }
+
+    &.small {
+        padding-top: 7px;
+        padding-right: 32px;
+        padding-bottom: 7px;
+        padding-left: 32px;
+    }
+}
+
+.button-row {
+    text-align: center;
+}

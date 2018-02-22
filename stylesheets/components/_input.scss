@@ -1,0 +1,11 @@
+input[type="text"], input[type="email"], input[type="phone"] {
+    height: 47px;
+    padding: 0 24px;
+    line-height: 42px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: $base-border-radius;
+    font-size: rem(16px);
+
+    @include placeholder(rgba(#fff, 0.9), $RalewayL);
+}
